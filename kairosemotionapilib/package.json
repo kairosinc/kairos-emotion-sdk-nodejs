@@ -1,0 +1,13 @@
+{
+  "name": "kairosemotionapilib",
+  "version": "1.0.0",
+  "description": "Overview",
+  "main": "./lib/index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "APIMATIC SDK Generator",
+  "dependencies": {
+    "request": "^2.55.0",
+    "string": "^3.1.1"
+  }
+}
