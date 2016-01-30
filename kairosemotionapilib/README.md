@@ -30,6 +30,8 @@ The following shows how import the controllers and use (demonstrated in EmotionA
         var controller = kairosemotionapilib.kairosemotionapilib;
         controller.createMedia({file path}, callback);
 
+        cd into the directory and run node EmotionAnalysisControllerTest.js
+
 
     
 

@@ -20,7 +20,7 @@ var configuration = {
     appKey : "",
 
     //set timeout in seconds for API processes
-    api_timeout: 10
+    apiTimeout: 10
 
 };
 

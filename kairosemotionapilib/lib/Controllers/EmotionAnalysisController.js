@@ -37,7 +37,8 @@ var EmotionAnalysisController = {
         
         //Process query parameters
         queryBuilder = APIHelper.appendUrlWithQueryParameters(queryBuilder, {
-            "source" : source
+            "source" : source,
+            "timeout" : configuration.apiTimeout
         });
 
         //validate and preprocess url
@@ -62,10 +63,11 @@ var EmotionAnalysisController = {
                 console.log(callback)
                 callback({errorMessage: error.message, errorCode: error.code},null,context);
             }else if (response.statusCode >= 200 && response.statusCode <= 206) {
-                self.getMediaById(
+                self.deleteMediaById(
                     JSON.parse(response.body).id,
                     function (e,r,c) {console.log(r)}
                 )
+                console.log(response.body)
             }else{
                 //Error handling using HTTP status codes
                 callback({errorMessage: "HTTP Response Not OK", errorCode: response.statusCode, errorResponse:response.body},null,context);
